@@ -1,0 +1,53 @@
+print("1:Hello there? ")
+print("1:This programme was made to calculate simple and compound interest")
+print("____________________________________________________________________")
+print("1. simple interest.")
+print("2. compound interest.")
+choice = input("input 1 or 2: ")
+
+if choice == "1":
+    print("________________________________________________________________")
+    print(" ____              ___          ___                             ")
+    print(" |___  |  |\\  /|  |___|  |      |__                            ")
+    print(" ____| |  | \\/ |  |      |___   |__                            ")
+    print("                  |                                             ")
+    print("  ___         _____ ___  ___  ___  ___  ___                     ")
+    print("   |    |\\ |    |   |__  |__| |__  |__   |                     ")
+    print("  _|_   | \\|    |   |__  | \\  |__  ___|  |           by Brian.")
+    print("________________________________________________________________")
+
+    print("you chose simple interest: ")
+
+    deposit = input("input the deposit here: ")
+    rate = input("input the interest rate here: ")
+    time = input("input the time in years here: ")
+    result = float(deposit) * float(rate) * float(time) / 100
+    print("The simple interest is: ")
+    print("")
+    print(result)
+# This prints the results of simple interest alone excluding the initial deposit
+    print("______________________________________________________________________")
+else:
+    print("________________________________________________________________")
+    print("   ___    __          ___   __                                  ")
+    print("   |     |  |  |\\  /| |__| |  |   |  |  |\\ |  |\\             ")
+    print("   |__   |__|  | \\/ | |    |__|   |__|  | \\|  |_|             ")
+    print("                                                                ")
+    print("   ___       ___  ___   ___  ___  ___  ___                      ")
+    print("    |   |\\ |  |   |__   |__| |__  |__   |                      ")
+    print("   _|_  | \\|  |   |__   | \\  |__  ___|  |            by Brian.")
+    print("________________________________________________________________")
+    print("you chose compound interest: ")
+
+    deposit = float(input("input the deposit here: "))
+    rate = float(input("input the interest rate in percentage here: "))
+    time = float(input("input the time in years here: "))
+    result = deposit * ((1 + rate / 100) ** time - 1)
+    print("The compound interest is: ")
+    print("")
+    print(result)
+# This prints the results of compound interest alone excluding the initial deposit
+print("")
+print("")
+print("thanks for using my programme. XD.")
+print("______________________________________________________________________")
