@@ -1,9 +1,11 @@
 print("1:Hello there? ")
-print("1:This programme was made to calculate simple and compound interest")
+print("2:This programme was made to calculate simple and compound interest")
 print("____________________________________________________________________")
 print("1. simple interest.")
 print("2. compound interest.")
-choice = input("input 1 or 2: ")
+print("3. quadratic equation."
+print("_____________________________________________________________________")
+choice = input("input choice from above: ")
 
 if choice == "1":
     print("________________________________________________________________")
@@ -52,3 +54,25 @@ print("")
 print("thanks for using my programme. XD.")
 print("______________________________________________________________________")
 print("______________________________________________________________________")
+if choice ==3:
+ import math
+ print("simple quadratic equations.     programme")
+print("by brian")
+a = float(input("input a here:"))
+b = float(input("input b here:"))
+c = float(input("input c here:"))
+
+discriminant = b**2 - 4*a*c
+result1 = (-b + math.sqrt(discriminant)) / (2*a)
+result2 = (-b - math.sqrt(discriminant)) / (2*a)
+
+print("the formulae = ax^2 + bx + c")
+print("therefore we substitute a b and c")
+print("________________________________________________________")
+print("this becomes " + str(a)+"x^2 + " + str(b) + "x" + str(c))
+print("the quadratic equation is -b ± √b -4ac /2a")
+print("therefore the substitution becomes"+ str(-b) + "±" + str(b) + "-" + str(4*a*c) + "/" + str(2*a))
+print(" x is therefore equal to:" + str(result1) + " or " + str(result2))
+print("_________________________________________________________")
+print("thanks for using this programme.")
+print("_________________________________________________________")
