@@ -3,7 +3,7 @@ print("2:This programme was made to calculate simple and compound interest")
 print("____________________________________________________________________")
 print("1. simple interest.")
 print("2. compound interest.")
-print("3. quadratic equation."
+print("3. quadratic equation.")
 print("_____________________________________________________________________")
 choice = input("input choice from above: ")
 
@@ -27,9 +27,9 @@ if choice == "1":
     print("The simple interest is: ")
     print("")
     print(result)
-# This prints the results of simple interest alone excluding the initial deposit
-    print("______________________________________________________________________")
-else:
+# This prints the results of simple interest alone excluding the initial deposit    print("______________________________________________________________________")
+
+if choice =="2":
     print("________________________________________________________________")
     print("   ___    __          ___   __                                  ")
     print("   |     |  |  |\\  /| |__| |  |   |  |  |\\ |  |\\             ")
@@ -49,15 +49,15 @@ else:
     print("")
     print(result)
 # This prints the results of compound interest alone excluding the initial deposit
-print("")
-print("")
-print("thanks for using my programme. XD.")
+    print("")
+    print("")
+    print("thanks for using my programme.")
 print("______________________________________________________________________")
 print("______________________________________________________________________")
+
 if choice ==3:
- import math
- print("simple quadratic equations.     programme")
-print("by brian")
+       import math
+       print("simple quadratic equations programme")
 a = float(input("input a here:"))
 b = float(input("input b here:"))
 c = float(input("input c here:"))
