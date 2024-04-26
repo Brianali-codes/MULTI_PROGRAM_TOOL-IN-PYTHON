@@ -56,23 +56,23 @@ print("______________________________________________________________________")
 print("______________________________________________________________________")
 
 if choice ==3:
-       import math
-       print("simple quadratic equations programme")
-a = float(input("input a here:"))
-b = float(input("input b here:"))
-c = float(input("input c here:"))
+    import math
+    print("simple quadratic equations programme")
+    a = float(input("input a here:"))
+    b = float(input("input b here:"))
+    c = float(input("input c here:"))
 
 discriminant = b**2 - 4*a*c
 result1 = (-b + math.sqrt(discriminant)) / (2*a)
 result2 = (-b - math.sqrt(discriminant)) / (2*a)
 
-print("the formulae = ax^2 + bx + c")
-print("therefore we substitute a b and c")
-print("________________________________________________________")
-print("this becomes " + str(a)+"x^2 + " + str(b) + "x" + str(c))
-print("the quadratic equation is -b ± √b -4ac /2a")
-print("therefore the substitution becomes"+ str(-b) + "±" + str(b) + "-" + str(4*a*c) + "/" + str(2*a))
-print(" x is therefore equal to:" + str(result1) + " or " + str(result2))
-print("_________________________________________________________")
-print("thanks for using this programme.")
-print("_________________________________________________________")
+    print("the formulae = ax^2 + bx + c")
+    print("therefore we substitute a b and c")
+    print("________________________________________________________")
+    print("this becomes " + str(a)+"x^2 + " + str(b) + "x" + str(c))
+    print("the quadratic equation is -b ± √b -4ac /2a")
+    print("therefore the substitution becomes"+ str(-b) + "±" + str(b) + "-" + str(4*a*c) + "/" + str(2*a))
+    print(" x is therefore equal to:" + str(result1) + " or " + str(result2))
+    print("_________________________________________________________")
+    print("thanks for using this programme.")
+    print("_________________________________________________________")
