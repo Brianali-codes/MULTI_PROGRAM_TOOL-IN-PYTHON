@@ -55,16 +55,15 @@ if choice =="2":
 print("______________________________________________________________________")
 print("______________________________________________________________________")
 
-if choice ==3:
+if choice == "3":
     import math
     print("simple quadratic equations programme")
     a = float(input("input a here:"))
     b = float(input("input b here:"))
     c = float(input("input c here:"))
-
-discriminant = b**2 - 4*a*c
-result1 = (-b + math.sqrt(discriminant)) / (2*a)
-result2 = (-b - math.sqrt(discriminant)) / (2*a)
+    discriminant = b**2 - 4*a*c
+    result1 = (-b + math.sqrt(discriminant)) / (2*a)
+    result2 = (-b - math.sqrt(discriminant)) / (2*a)
 
     print("the formulae = ax^2 + bx + c")
     print("therefore we substitute a b and c")
