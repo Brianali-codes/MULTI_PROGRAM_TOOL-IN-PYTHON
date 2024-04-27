@@ -24,9 +24,11 @@ if choice == "1":
     rate = input("input the interest rate here: ")
     time = input("input the time in years here: ")
     result = float(deposit) * float(rate) * float(time) / 100
-    print("The simple interest is: ")
     print("")
-    print(result)
+    print("")
+    print("The simple interest is:  "+ str(float(result)))
+    print("")
+    print("_______________________________________________________________________")
 # This prints the results of simple interest alone excluding the initial deposit    print("______________________________________________________________________")
 
 if choice =="2":
@@ -45,15 +47,13 @@ if choice =="2":
     rate = float(input("input the interest rate in percentage here: "))
     time = float(input("input the time in years here: "))
     result = deposit * ((1 + rate / 100) ** time - 1)
-    print("The compound interest is: ")
     print("")
-    print(result)
+
 # This prints the results of compound interest alone excluding the initial deposit
-    print("")
+    print("The compound interest is: " + str(float(result)))
     print("")
     print("thanks for using my programme.")
-print("______________________________________________________________________")
-print("______________________________________________________________________")
+    print("______________________________________________________________________")
 
 if choice == "3":
     import math
