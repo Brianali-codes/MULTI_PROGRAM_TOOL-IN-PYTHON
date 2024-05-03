@@ -11,7 +11,9 @@ print("6. simple calculator")
 print("_____________________________________________________________________")
 choice = input("input choice from above: ")
 
-if choice == "1":
+
+def simple_interest():
+    # program for calculating simple interest.
     print("________________________________________________________________")
     print("you chose simple interest: ")
     # asks user to input different values related to their simple interest calculation
@@ -23,11 +25,14 @@ if choice == "1":
     print("")
     print("The simple interest is: " + str(float(result)))
     print("")
+    print("")
     print("_______________________________________________________________________")
     # This prints the results of simple interest alone excluding the initial deposit
     print("______________________________________________________________________")
 
-if choice == "2":
+
+def compound_interest():
+    # program for calculating compound interest.
     print("________________________________________________________________")
     print("you chose compound interest: ")
     # asks for compound interest input values from the user.
@@ -43,7 +48,9 @@ if choice == "2":
     print("thanks for using my programme.")
     print("______________________________________________________________________")
 
-if choice == "3":
+
+def quadratic_equations():
+    # program for calculating quadratic equations.
     import math
 
     print("simple quadratic equations programme")
@@ -71,7 +78,9 @@ if choice == "3":
     print("thanks for using this programme.")
     print("________________________________________________________________")
 
-if choice == "4":
+
+def riddle_game():
+    # program for a riddle game.
     print("RIDDLE GAME! ")
     # the user has to guess correctly in order to match the secret word to the guess.
     print("the riddle game consists of 10 riddles the programme may not\n be entirely accurate.")
@@ -178,12 +187,9 @@ if choice == "4":
 
     print("_________________________________________________________")
 
-if choice == "29":
-    print("Well done you just found my favorite number, "
-          "you are deemed worthy"
-          " of taking on my project"
-          "here is the source code my brethren:")
-if choice == "5":
+
+def password_guessing_game():
+    # program for a password guessing game.
     print("password guess")
     guess1 = "password"
     guess0 = ""
@@ -194,7 +200,10 @@ if choice == "5":
         else:
             print("correct!!!")
 
-if choice == "6":
+
+def simple_calculator():
+    # program for a simple calculator which takes user input and converts it into variables which are
+    # part of the programmes logic
     print("simple calculator")
     num_1 = float(input("Input your first number"))
     operator = input("input operator( x + / or + )")
@@ -215,6 +224,19 @@ if choice == "6":
 
     if results is not None:
         print("Result:", results)
-if choice == "7":
-    print("")
-    
+
+
+if choice == "1":
+    simple_interest()
+elif choice == "2":
+    compound_interest()
+elif choice == "3":
+    quadratic_equations()
+elif choice == "4":
+    riddle_game()
+elif choice == "5":
+    password_guessing_game()
+elif choice == "6":
+    simple_calculator()
+else:
+    print("invalid choice choose again.")
