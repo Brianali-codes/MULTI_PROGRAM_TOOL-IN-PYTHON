@@ -1,15 +1,20 @@
 
-print("Hello there? ")
-print("This programme was made aiming to understand python basics.")
-print("____________________________________________________________________")
-print("1. simple interest.")
-print("2. compound interest.")
-print("3. quadratic equation.")
-print("4. Riddle Game.")
-print("5. Password guessing game")
-print("6. simple calculator")
-print("_____________________________________________________________________")
-choice = input("input choice from above: ")
+def start_programme():
+    print("Hello there? ")
+    print("This programme was made aiming to understand python basics.")
+    print("____________________________________________________________________")
+    print("1. simple interest.")
+    print("2. compound interest.")
+    print("3. quadratic equation.")
+    print("4. Riddle Game.")
+    print("5. Password guessing game")
+    print("6. simple calculator")
+    print("7. power calculator.")
+    print("8. True or false game.")
+    print("_____________________________________________________________________")
+
+
+start_programme()
 
 
 def simple_interest():
@@ -46,7 +51,7 @@ def compound_interest():
     print("The compound interest is: " + str(float(result)))
     print("")
     print("thanks for using my programme.")
-    print("______________________________________________________________________")
+    print("________________________________________________________________")
 
 
 def quadratic_equations():
@@ -63,7 +68,7 @@ def quadratic_equations():
     result2 = (-b - math.sqrt(discriminant)) / (2 * a)
     # calculates discriminants.
     print("_______________________________________________________________")
-    print("the formulae = ax^2 + bx + c")
+    print("the formulae is: ax^2 + bx + c = 0.")
     print("therefore we substitute a b and c")
     print("_______________________________________________________________")
     print("this becomes " + str(a) + " x^2 + " + str(b) + " x " + "+" + str(c))
@@ -73,7 +78,7 @@ def quadratic_equations():
     print("therefore the substitution becomes " + str(-b) + " ± " + str(b) + "-" + str(4 * a * c) + " / " + str(2 * a))
     print("")
     print("")
-    print(" x is therefore equal to:" + str(round(result1, 2)) + " or " + str(round(result2, 2)))
+    print(" x is therefore equal to:" + str(round(result1, 3)) + " or " + str(round(result2, 3)))
     print("________________________________________________________________")
     print("thanks for using this programme.")
     print("________________________________________________________________")
@@ -109,7 +114,7 @@ def riddle_game():
     secret_word2 = "age"
     guess = ""
     while guess != secret_word2:
-        guess = input("What goes up but never comes down? ")
+        guess = input("What goes up but never comes down?: ")
         print("try again")
     print("well done you got it! its your age. ")
 
@@ -119,7 +124,7 @@ def riddle_game():
     secret_word3 = "footsteps"
     guess = ""
     while guess != secret_word3:
-        guess = input("The more you take, the more\n you leave behind. What am I?")
+        guess = input("The more you take, the more\n you leave behind. What am I?: ")
         print("try again")
     print(" well done its your footsteps")
 
@@ -129,7 +134,7 @@ def riddle_game():
     secret_word4 = "piano"
     guess = ""
     while guess != secret_word4:
-        guess = input("What has keys but can't open locks?")
+        guess = input("What has keys but can't open locks?: ")
         print("try again")
     print(" well done its a piano.")
 
@@ -139,7 +144,7 @@ def riddle_game():
     secret_word5 = "penny"
     guess = ""
     while guess != secret_word5:
-        guess = input("What has a head, a tail, is brown, and has no legs?")
+        guess = input("What has a head, a tail, is brown, and has no legs?: ")
         print("try again")
     print(" well done its a penny.")
 
@@ -149,7 +154,7 @@ def riddle_game():
     secret_word6 = "stamp"
     guess = ""
     while guess != secret_word6:
-        guess = input("What travels the world while staying on a corner")
+        guess = input("What travels the world while staying on a corner?: ")
         print("try again")
     print(" well done its a stamp.")
 
@@ -160,7 +165,7 @@ def riddle_game():
     guess = ""
     while guess != secret_word7:
         guess = input(" What comes once in a minute, \n"
-                      "twice in a moment, but never in a thousand years")
+                      "twice in a moment, but never in a thousand years: ")
         print("try again")
     print(" well done its the letter m.")
 
@@ -169,7 +174,7 @@ def riddle_game():
     secret_word8 = "bottle"
     guess = ""
     while guess != secret_word8:
-        guess = input("What has a neck but no head?")
+        guess = input("What has a neck but no head?: ")
         print("try again")
     print(" well done its a bottle.")
 
@@ -179,9 +184,10 @@ def riddle_game():
     secret_word9 = "time"
     guess = ""
     while guess != secret_word9:
-        guess = input("The more you take, the more you leave behind. What am I?")
+        guess = input("The more you take, the more you leave behind. What am I?: ")
         print("try again")
-    print(" well done its time.")
+    print("well done its time.")
+    print("congratulations you got all 10 riddles")
 
     # if the user answers wrong then the programme loops and asks to try again.
 
@@ -205,6 +211,8 @@ def simple_calculator():
     # program for a simple calculator which takes user input and converts it into variables which are
     # part of the programmes logic
     print("simple calculator")
+    print("this is a simple calculator therefore it can only \n"
+          "do simple tasks negatives and squares are not yet supported.")
     num_1 = float(input("Input your first number"))
     operator = input("input operator( x + / or + )")
     num_2 = float(input("Input your second number"))
@@ -221,10 +229,48 @@ def simple_calculator():
         results = num_1 * num_2
     if operator == '/' and num_2 == 0:
         print("Error! Division by zero.")
+        return simple_calculator()
 
     if results is not None:
         print("Result:", results)
+    else:
+        print("invalid operator or choice")
+        return simple_calculator()
 
+
+def power_calculator():
+    print("power calculator: ")
+    num_1 = float(input("input your First number: "))
+    num_2 = float(input("input power: "))
+    result5 = num_1 ** num_2
+    print("________________________________________________")
+    if result5 > 10000000000:
+        print("result is large what are you doing with this: LOL")
+    else:
+        print("answer is: " + str(result5))
+
+
+def true_or_false():
+    print("____________________________________________________________")
+    print("This is a true and false game.")
+    print("you are only allowed to answer one of two choices true or false")
+    print("____________________________________________________________")
+    # stat means statement.
+    # stat 1 store key input which should be same as user guess in order to
+    # complete the loops
+    stat1 = "true"
+    user_guess = ""
+    while user_guess != stat1:
+        print("1.There are more iterations of a game of chess \n "
+              "than there are atoms in the observable universe. ")
+        user_guess = input("input true or false: ")
+        if user_guess != stat1:
+            print("try again: ")
+        else:
+            print("nice there are actually more than you think.")
+
+
+choice = input("input choice for programme: ")
 
 if choice == "1":
     simple_interest()
@@ -238,5 +284,9 @@ elif choice == "5":
     password_guessing_game()
 elif choice == "6":
     simple_calculator()
+elif choice == "7":
+    power_calculator()
+elif choice == "8":
+    true_or_false()
 else:
-    print("invalid choice choose again.")
+    print("please restart the programme.")
