@@ -1,1 +1,3 @@
-This was a simple programme made in a single day aiming at understanding the difference between attributes,functions, enumeration in python and simple structuring in python
+This is a simple interface programme made aiming to understand python basics and syntax
+it contains programmes for, simple interest , compound interest, quadratic equations, a riddle game, a password guessing game, a random recipe generator and a rock paper scissors game.
+feel free to modify the code to your liking.
