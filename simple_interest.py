@@ -1,3 +1,4 @@
+
 import random
 
 
@@ -40,12 +41,15 @@ def main():
         # prompts the user to restart the programme.
         # programme also restarts anyway no matter the input
         # this sections is to reduce amount of output on the screen
-        input_1 = input("input 1 to restart: ")
-        if input_1 == "1":
-            main()
-        else:
-            print("ok ill restart it anyways :)")
-            main()
+        choices_1 = ["1", "2"]
+        input_1 = ""
+        while input_1 not in choices_1:
+            input_1 = input("input 1 to restart or 2 for simple interest again.: ")
+            if input_1 == "1":
+                main()
+            else:
+                print("ok ill restart it anyways :)")
+                simple_interest()
 
     def compound_interest():
         # program for calculating compound interest.
@@ -63,12 +67,14 @@ def main():
         print("")
         print("thanks for using my programme.")
         print("________________________________________________________________")
-        input_1 = input("input 1 to restart: ")
-        if input_1 == "1":
-            main()
-        else:
-            print("ok ill restart it anyways :)")
-            main()
+        input_2 = ""
+        choices_2 = ["1," "2"]
+        while input_2 not in choices_2:
+            input_2 = input(str("input 1 to go back or 2 to restart compound interest!: "))
+            if input_2 == "1":
+                main()
+            elif input_2 == "2":
+                compound_interest()
 
     def quadratic_equations():
         # program for calculating quadratic equations.
@@ -99,125 +105,166 @@ def main():
         print("________________________________________________________________")
         print("thanks for using this programme.")
         print("________________________________________________________________")
-        input_1 = input("input 1 to restart: ")
-        if input_1 == "1":
-            main()
-        else:
-            print("ok ill restart it anyways :)")
-            main()
+        choices_3 = ["1", "2"]
+        input_3 = ""
+        while input_3 not in choices_3:
+            input_3 = input("input 1 to restart or 2 for quadratic equations: ")
+            if input_3 == "1":
+                main()
+            else:
+                quadratic_equations()
 
     def riddle_game():
+        answers = ["feather", "river", "age", "footsteps", "piano", "penny", "stamp", "m"
+                                                                                      "bottle", "time"]
         # program for a riddle game.
         print("RIDDLE GAME! ")
         # the user has to guess correctly in order to match the secret word to the guess.
         print("the riddle game consists of 10 riddles the programme may not\n be entirely accurate.")
         print("riddle 1: ")
+        score = 0
         secret_word = "feather"
-        guess = ""
-        while guess != secret_word:
-            guess = input("I am easy to lift, but hard to throw. What am I?: ").lower()
-            print("try again")
-        print("well done you got it! its a feather. ")
+        guess = input("I am easy to lift, but hard to throw. What am I?: ").lower()
+
+        if guess != secret_word:
+            score += 0
+            print("wrong")
+        else:
+            score += 1
+            print("well done you got it! its a feather. ")
 
         print("_________________________________________________________")
         print("")
         print("2nd riddle: ")
         next_secret_word = "river"
-        guess = ""
-        while guess != next_secret_word:
-            guess = input("What can run but never walk"
-                          "\nhas a head but never weeps, "
-                          "\nhas a bed but. never sleeps?: ")
-            print("try again")
-        print("well done you got it! its a river!!")
-
+        guess = input("i have a head but can not drink, a tail but cant swim\n"
+                      "what am i?")
+        if guess != next_secret_word:
+            score += 0
+            print("wrong")
+        else:
+            score += 1
+            print("well done you got it! its a feather. ")
         print("_________________________________________________________")
         print("third riddle")
         secret_word2 = "age"
         guess = ""
-        while guess != secret_word2:
-            guess = input("What goes up but never comes down?: ").lower()
-            print("try again")
-        print("well done you got it! its your age. ")
-
+        guess = input("What goes up but never comes down?: ").lower()
+        if guess != secret_word2:
+            score += 0
+        else:
+            score += 1
+            print("well done you got it! its your age.")
         print("_________________________________________________________")
 
         print("fourth riddle. ")
         secret_word3 = "footsteps"
         guess = ""
-        while guess != secret_word3:
-            guess = input("The more you take, the more\n you leave behind. What am I?: ").lower()
-            print("try again")
+        guess = input("The more you take, the more\n you leave behind. What am I?: ").lower()
         print(" well done its your footsteps")
-
+        if guess != secret_word3:
+            score += 0
+            print("wrong!!!")
+        else:
+            score += 1
+            print(" well done its your footsteps")
         print("_________________________________________________________")
 
         print("fifth riddle. ")
         secret_word4 = "piano"
         guess = ""
-        while guess != secret_word4:
-            guess = input("What has keys but can't open locks?: ").lower()
-            print("try again")
-        print(" well done its a piano.")
+        guess = input("What has keys but can't open locks?: ").lower()
 
+        if guess != secret_word4:
+            score += 0
+            print("wrong")
+        else:
+            score += 1
+            print(" well done its a piano.")
         print("_________________________________________________________")
 
         print("sixth riddle. ")
         secret_word5 = "penny"
         guess = ""
-        while guess != secret_word5:
-            guess = input("What has a head, a tail, is brown, and has no legs?: ").lower()
-            print("try again")
-        print(" well done its a penny.")
+        guess = input("What has a head, a tail, is brown, and has no legs?: ").lower()
+
+        if guess != secret_word5:
+            score += 0
+            print("wrong!!!")
+        else:
+            score += 1
+            print(" well done its a penny.")
 
         print("_________________________________________________________")
 
         print("seventh riddle. ")
         secret_word6 = "stamp"
         guess = ""
-        while guess != secret_word6:
-            guess = input("What travels the world while staying on a corner?: ").lower()
-            print("try again")
-        print(" well done its a stamp.")
+        guess = input("What travels the world while staying on a corner?: ").lower()
+
+        if guess != secret_word6:
+            score += 0
+            print("wrong")
+        else:
+            score += 1
+            print(" well done its a stamp.")
 
         print("_________________________________________________________")
 
         print("eighth riddle. ")
         secret_word7 = "m"
         guess = ""
-        while guess != secret_word7:
-            guess = input(" What comes once in a minute, \n"
-                          "twice in a moment, but never in a thousand years: ").lower()
-            print("try again")
-        print(" well done its the letter m.")
+        guess = input(" What comes once in a minute, \n"
+                      "twice in a moment, but never in a thousand years: ").lower()
+
+        if guess != secret_word7:
+            score += 0
+            print("wrong")
+        else:
+            score += 1
+            print(" well done its the letter m.")
 
         print("_________________________________________________________")
+
         print("ninth riddle")
         secret_word8 = "bottle"
         guess = ""
-        while guess != secret_word8:
-            guess = input("What has a neck but no head?: ").lower()
-            print("try again")
-        print(" well done its a bottle.")
+        guess = input("What has a neck but no head?: ").lower()
+
+        if guess != secret_word8:
+            score += 0
+            print("wrong!!!")
+        else:
+            score += 1
+            print(" well done its a bottle.")
 
         print("_________________________________________________________")
 
         print("tenth riddle")
         secret_word9 = "time"
         guess = ""
-        while guess != secret_word9:
-            guess = input("The more you take, the more you leave behind. What am I?: ").lower()
-            print("try again")
-        print("well done its time.")
-        print("congratulations you got all 10 riddles")
-        input_1 = input("input 1 to restart: ")
+        guess = input("The more you take, the more you leave behind. What am I?: ").lower()
+        if guess != secret_word9:
+            score += 0
+            print("wrong")
+        else:
+            score += 1
+            print("well done its time.")
+        print("")
+        # this section records the score and gives the appropriate pep talk :)
+        if score < 5:
+            print("come on you can do better, you got " + str(score) + " / 10!")
+        else:
+            print("congratulations you got " + str(score) + "/ 10.")
+        print("")
+        input_1 = input("input 1 to restart or 2 to replay(riddle game): ")
         if input_1 == "1":
             main()
         else:
             print("ok ill restart it anyways :)")
-            main()
+            riddle_game()
 
-        # if the user answers wrong then the programme loops and asks to try again.
+        # if the user answers wrong the score is 0 and when right score adds 1.
 
         print("_________________________________________________________")
 
@@ -226,18 +273,27 @@ def main():
         print("password guess")
         guess1 = "password"
         guess0 = ""
+        guesses = 0
+        total_guesses = 6
         while guess0 != guess1:
-            guess0 = input("input guess:")
-            if guess0 != guess1:
-                print("wrong!!!")
+
+            guesses += 1
+            if guesses < total_guesses != guess1:
+                guess0 = input("input guess you have 5 attempts:")
             else:
-                print("correct!!!")
-        input_1 = input("input 1 to restart the programme.: ")
+                print("blocked!!!")
+                break
+            if guess0 == guess1:
+                print("correct!")
+            else:
+                print("wrong!!!")
+
+        input_1 = input("input 1 to restart the programme or 2 for a rerun.: ")
         if input_1 == "1":
             main()
         else:
             print("ok ill restart it anyways :)")
-            main()
+            password_guessing_game()
 
     def simple_calculator():
         # program for a simple calculator which takes user input and converts it into variables which are
@@ -268,12 +324,12 @@ def main():
             print("Result:", results)
         else:
             print("invalid operator or choice")
-        input_1 = input("input 1 to restart: ")
+        input_1 = input("input 1 to restart or 2 to relaunch calculator: ")
         if input_1 == "1":
             main()
         else:
             print("ok ill restart it anyways :)")
-            main()
+            simple_calculator()
 
     def power_calculator():
         print("power calculator: ")
@@ -322,7 +378,7 @@ def main():
             print("ok ill restart it anyways :)")
             main()
 
-    def rps():
+    def rock_paper_scissors():
         # function for the rock paper scissors game.
 
         def start_game():
@@ -553,11 +609,11 @@ def main():
     elif choice == "8":
         true_or_false()
     elif choice == "9":
-        rps()
+        rock_paper_scissors()
     elif choice == "10":
         random_recipe_generator()
     else:
-        print("input the right choice.")
+        print("please input the right choice.")
         main()
 
 
