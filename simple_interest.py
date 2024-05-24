@@ -1,4 +1,3 @@
-
 import random
 
 
@@ -30,9 +29,11 @@ def main():
         rate = input("input the interest rate here: ")
         time = input("input the time in years here: ")
         result = float(deposit) * float(rate) * float(time) / 100
+        # round to 3 decimal places in order to make the answer better presented.
+        final_result = round(result, 3)
         print("")
         print("")
-        print("The simple interest is: " + str(float(result)))
+        print("The simple interest is: " + str(float(final_result)))
         print("")
         print("")
         print("_______________________________________________________________________")
@@ -47,8 +48,7 @@ def main():
             input_1 = input("input 1 to restart or 2 for simple interest again.: ")
             if input_1 == "1":
                 main()
-            else:
-                print("ok ill restart it anyways :)")
+            elif input_1 == "2":
                 simple_interest()
 
     def compound_interest():
@@ -115,19 +115,15 @@ def main():
                 quadratic_equations()
 
     def riddle_game():
-        answers = ["feather", "river", "age", "footsteps", "piano", "penny", "stamp", "m"
-                                                                                      "bottle", "time"]
+        answers = ["feather", "river", "age", "footsteps", "piano", "penny", "stamp", "m", "bottle", "time"]
         # program for a riddle game.
         print("RIDDLE GAME! ")
         # the user has to guess correctly in order to match the secret word to the guess.
         print("the riddle game consists of 10 riddles the programme may not\n be entirely accurate.")
         print("riddle 1: ")
         score = 0
-        secret_word = "feather"
         guess = input("I am easy to lift, but hard to throw. What am I?: ").lower()
-
-        if guess != secret_word:
-            score += 0
+        if guess != answers[0]:
             print("wrong")
         else:
             score += 1
@@ -136,34 +132,28 @@ def main():
         print("_________________________________________________________")
         print("")
         print("2nd riddle: ")
-        next_secret_word = "river"
         guess = input("i have a head but can not drink, a tail but cant swim\n"
                       "what am i?")
-        if guess != next_secret_word:
-            score += 0
+        if guess != answers[1]:
             print("wrong")
         else:
             score += 1
-            print("well done you got it! its a feather. ")
+            print("well done you got it! its a river. ")
         print("_________________________________________________________")
         print("third riddle")
-        secret_word2 = "age"
         guess = ""
         guess = input("What goes up but never comes down?: ").lower()
-        if guess != secret_word2:
-            score += 0
+        if guess != answers[2]:
+            print("wrong!")
         else:
             score += 1
             print("well done you got it! its your age.")
         print("_________________________________________________________")
 
         print("fourth riddle. ")
-        secret_word3 = "footsteps"
-        guess = ""
         guess = input("The more you take, the more\n you leave behind. What am I?: ").lower()
         print(" well done its your footsteps")
-        if guess != secret_word3:
-            score += 0
+        if guess != answers[3]:
             print("wrong!!!")
         else:
             score += 1
@@ -171,12 +161,9 @@ def main():
         print("_________________________________________________________")
 
         print("fifth riddle. ")
-        secret_word4 = "piano"
-        guess = ""
         guess = input("What has keys but can't open locks?: ").lower()
 
-        if guess != secret_word4:
-            score += 0
+        if guess != answers[4]:
             print("wrong")
         else:
             score += 1
@@ -184,12 +171,9 @@ def main():
         print("_________________________________________________________")
 
         print("sixth riddle. ")
-        secret_word5 = "penny"
-        guess = ""
         guess = input("What has a head, a tail, is brown, and has no legs?: ").lower()
 
-        if guess != secret_word5:
-            score += 0
+        if guess != answers[5]:
             print("wrong!!!")
         else:
             score += 1
@@ -198,12 +182,9 @@ def main():
         print("_________________________________________________________")
 
         print("seventh riddle. ")
-        secret_word6 = "stamp"
-        guess = ""
         guess = input("What travels the world while staying on a corner?: ").lower()
 
-        if guess != secret_word6:
-            score += 0
+        if guess != answers[6]:
             print("wrong")
         else:
             score += 1
@@ -212,13 +193,10 @@ def main():
         print("_________________________________________________________")
 
         print("eighth riddle. ")
-        secret_word7 = "m"
-        guess = ""
         guess = input(" What comes once in a minute, \n"
                       "twice in a moment, but never in a thousand years: ").lower()
 
-        if guess != secret_word7:
-            score += 0
+        if guess != answers[7]:
             print("wrong")
         else:
             score += 1
@@ -227,12 +205,8 @@ def main():
         print("_________________________________________________________")
 
         print("ninth riddle")
-        secret_word8 = "bottle"
-        guess = ""
         guess = input("What has a neck but no head?: ").lower()
-
-        if guess != secret_word8:
-            score += 0
+        if guess != answers[8]:
             print("wrong!!!")
         else:
             score += 1
@@ -241,18 +215,15 @@ def main():
         print("_________________________________________________________")
 
         print("tenth riddle")
-        secret_word9 = "time"
-        guess = ""
         guess = input("The more you take, the more you leave behind. What am I?: ").lower()
-        if guess != secret_word9:
-            score += 0
+        if guess != answers[9]:
             print("wrong")
         else:
             score += 1
             print("well done its time.")
         print("")
         # this section records the score and gives the appropriate pep talk :)
-        if score < 5:
+        if score < 6:
             print("come on you can do better, you got " + str(score) + " / 10!")
         else:
             print("congratulations you got " + str(score) + "/ 10.")
